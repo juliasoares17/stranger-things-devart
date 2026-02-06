@@ -717,3 +717,10 @@ svg{
     opacity: 1;
     z-index: 9999;
 }
+
+#pre_loader svg {
+  width: 35%;
+  height: auto;
+  transform: translateZ(0);
+}
+
