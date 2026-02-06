@@ -94,25 +94,34 @@ function animarPagina() {
 //PRELOADER
 
 window.onload = () => {
-    const tl = gsap.timeline({
-        onComplete(){
-            animarPagina()
-            gsap.to("#pre_loader", {
-                opacity: 0,
-                onComplete: () => {
-                    document.getElementById("pre_loader").style.display = "none";
-                }
-            })
+  gsap.set("#pre_loader path", {
+    strokeDasharray: 1000,
+    strokeDashoffset: 1000,
+    fill: "transparent"
+  });
+
+  const tl = gsap.timeline({
+    onComplete() {
+      animarPagina();
+      gsap.to("#pre_loader", {
+        opacity: 0,
+        duration: .4,
+        onComplete: () => {
+          document.getElementById("pre_loader").style.display = "none";
         }
-    });
+      });
+    }
+  });
 
-    tl.fromTo("#pre_loader path",
-        { strokeDashoffset: 1000, fill: "transparent" },
-        { strokeDashoffset: 0, duration: 1.5 }
-    );
+  tl.to("#pre_loader path", {
+    strokeDashoffset: 0,
+    duration: 1.2,
+    ease: "power2.out"
+  });
 
-    tl.to("#pre_loader path", {
-        fill: "rgb(168, 19, 19)",
-        duration: .6
-    })
-}
+  tl.to("#pre_loader path", {
+    fill: "rgb(168, 19, 19)",
+    duration: .6
+  });
+};
+
