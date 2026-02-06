@@ -106,10 +106,10 @@ window.onload = () => {
         }
     });
 
-    tl.to("#pre_loader path", {
-        strokeDashoffset: 0,
-        duration: 1.5
-    })
+    tl.fromTo("#pre_loader path",
+        { strokeDashoffset: 1000, fill: "transparent" },
+        { strokeDashoffset: 0, duration: 1.5 }
+    );
 
     tl.to("#pre_loader path", {
         fill: "rgb(168, 19, 19)",
