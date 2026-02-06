@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: "Benguiat";
-    src: url("/fonts/Benguiat\ Bold.ttf");
+    src: url("fonts/Benguiat\ Bold.ttf");
 }
 
 html, body{
@@ -62,7 +62,7 @@ picture{
 }
 
 .bg{
-    background-image: url("/assets/bg-sec2.webp");
+    background-image: url("assets/bg-sec2.webp");
     background-position: center;
     background-size: 81%;
     z-index: 2;
@@ -152,7 +152,7 @@ header {
         margin-top: 52px;
 
         .card{
-            background-image: url("/assets/card1.webp");
+            background-image: url("assets/card1.webp");
             background-size: cover;
             background-position: center;
             width: 32%;
@@ -164,11 +164,11 @@ header {
         }
 
         .card:nth-child(2){
-            background-image: url("/assets/card2.webp");
+            background-image: url("assets/card2.webp");
         }
 
         .card:nth-child(3){
-            background-image: url("/assets/card3.webp");
+            background-image: url("assets/card3.webp");
         }
     }
 }
@@ -222,7 +222,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("/assets/bg-footer.webp");
+    background-image: url("assets/bg-footer.webp");
     background-size: cover;
     background-position: center;
 
