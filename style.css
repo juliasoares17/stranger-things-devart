@@ -297,6 +297,28 @@ footer{
     }
 }
 
+/*PRELOADER*/
+
+#pre_loader svg{
+    width: 36vw;
+    height: auto;
+    transform: translateZ(0);
+}
+
+#pre_loader path{
+    stroke: rgb(168, 19, 19);
+}
+
+#pre_loader{
+    inset: 0;
+    position: fixed;
+    background-color: #0C0102;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
 /*RESPONSIVIDADE*/
 
 @media(max-width: 1500px){
@@ -457,6 +479,10 @@ footer{
     button{
         font-size: 12px;
     }
+
+    #pre_loader svg {
+        width: 60vw;
+    }    
 }
 
 @media (max-width: 660px){
@@ -689,38 +715,5 @@ footer{
     .bg{
         background-size: 580%;
     }
-}
-
-
-/*PRELOADER*/
-
-svg{
-    width: 36vw;
-    height: auto;
-
-    path{
-        fill: rgba(168, 19, 19, 0.279);
-        stroke: rgb(168, 19, 19);
-        stroke-dasharray: 1150;
-        stroke-dashoffset: 1150;
-    }
-}
-
-#pre_loader{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    background-color: #0C0102;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    z-index: 9999;
-}
-
-#pre_loader svg {
-  width: 35%;
-  height: auto;
-  transform: translateZ(0);
 }
 

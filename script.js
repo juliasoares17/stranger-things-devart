@@ -94,12 +94,12 @@ function animarPagina() {
 //PRELOADER
 
 window.onload = () => {
-
   gsap.set("#pre_loader path", {
-    strokeDasharray: 1000,
-    strokeDashoffset: 1000,
-    fill: "transparent"
-  });
+    strokeDasharray: 1150,
+    strokeDashoffset: 1150,
+    fill: "rgb(168, 19, 19)",
+    fillOpacity: 0
+  })
 
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
@@ -111,25 +111,24 @@ window.onload = () => {
             opacity: 0,
             duration: .4,
             onComplete: () => {
-              document.getElementById("pre_loader").style.display = "none";
+              document.getElementById("pre_loader").remove()
             }
-          });
+          })
         }
-      });
+      })
 
       tl.to("#pre_loader path", {
         strokeDashoffset: 0,
         duration: 1.2,
-        ease: "power2.out"
-      });
+      })
 
       tl.to("#pre_loader path", {
-        fill: "rgb(168, 19, 19)",
+        fillOpacity: 1,
         duration: .6
-      });
+      })
 
-    });
-  });
-};
+    })
+  })
+}
 
 
