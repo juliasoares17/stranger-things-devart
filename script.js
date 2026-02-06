@@ -98,7 +98,7 @@ window.onload = () => {
     strokeDasharray: 1150,
     strokeDashoffset: 1150,
     fill: "rgb(168, 19, 19)",
-    fillOpacity: 0
+    strokeOpacity: 1
   })
 
   requestAnimationFrame(() => {
